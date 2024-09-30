@@ -36,3 +36,33 @@ function solution(survey, choices) {
 
     return answer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+function solution(survey, choices) {
+    const characteristicType = {R: 0, T: 0, C: 0, F: 0, J: 0, M: 0, A: 0, N: 0};
+    const scores = [3, 2, 1, 0, 1, 2, 3];
+    const entries = [['R', 'T'], ['C', 'F'], ['J', 'M'], ['A', 'N']];
+
+    for (let i = 0; i < survey.length; i++) {
+        const choice = choices[i] - 1;
+        const intensity = choice <= 3 ? 0 : 1
+
+        characteristicType[survey[i][intensity]] += scores[choice];
+    }
+
+    return entries.reduce((type, [a, b]) => type + characteristicType[a] >= characteristicType[b] ? a : b, '')
+}
+*/
